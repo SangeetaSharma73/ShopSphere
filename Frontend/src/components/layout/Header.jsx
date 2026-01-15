@@ -12,6 +12,10 @@ const Header = () => {
       {user ? (
         <>
           <span>Hello, {user.name}</span>
+
+          {/* ✅ ADMIN LINK */}
+          {user.role === "admin" && <Link to="/admin">Admin</Link>}
+
           <Link to="/orders">Orders</Link>
           <button onClick={logout}>Logout</button>
         </>
